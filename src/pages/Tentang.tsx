@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Target, Eye, Heart, Users } from "lucide-react";
+import { Target, Eye, Heart, Users, User } from "lucide-react";
 
 const Tentang = () => {
   const values = [
@@ -27,24 +27,32 @@ const Tentang = () => {
 
   const team = [
     {
-      name: "Ahmad Rizki",
-      role: "CEO & Lead Developer",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop"
+      name: "Al Ikhsan AF",
+      role: "Founder & Team Lead"
     },
     {
-      name: "Siti Nurhaliza",
-      role: "UI/UX Designer",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop"
+      name: "Muh. Abdanul Ikhlas",
+      role: "Co-Founder & Frontend Developer"
     },
     {
-      name: "Budi Santoso",
-      role: "Backend Developer",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop"
+      name: "Muh. Riyadhi",
+      role: "Backend Developer"
     },
     {
-      name: "Dewi Lestari",
-      role: "Frontend Developer",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop"
+      name: "Yoga Agatha Pasaribu",
+      role: "Fullstack Developer"
+    },
+    {
+      name: "Hadi Hasan Lubis",
+      role: "UI/UX Designer"
+    },
+    {
+      name: "Muh Aditya Dwijaya",
+      role: "Media Sosial & Creative"
+    },
+    {
+      name: "Raziet Muaqil",
+      role: "Media Sosial & Creative"
     }
   ];
 
@@ -86,7 +94,7 @@ const Tentang = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
-              <Card 
+              <Card
                 key={index}
                 className="border-border hover:border-primary transition-all duration-300 hover:shadow-soft animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
@@ -112,18 +120,14 @@ const Tentang = () => {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {team.map((member, index) => (
-              <div 
+              <div
                 key={index}
                 className="text-center group animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="relative mb-4 overflow-hidden rounded-lg">
-                  <img 
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-gradient-hero opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
+                <div className="relative mb-4 overflow-hidden rounded-lg aspect-square flex items-center justify-center bg-secondary group-hover:bg-secondary/80 transition-all duration-300">
+                  <User className="w-20 h-20 text-primary group-hover:scale-110 transition-transform duration-300" />
+                  <div className="absolute inset-0 bg-gradient-hero opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
                 </div>
                 <h3 className="text-xl font-semibold text-foreground mb-1">
                   {member.name}

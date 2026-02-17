@@ -5,58 +5,44 @@ import { Calendar, MapPin, Users, MessageCircle, Instagram, Linkedin, Handshake 
 const Komunitas = () => {
   const events = [
     {
-      title: "Workshop: React Advanced Patterns",
-      date: "25 Maret 2024",
-      time: "14:00 - 17:00 WIB",
-      location: "Online via Zoom",
-      participants: "50+ peserta",
-      description: "Workshop intensif membahas advanced patterns di React seperti Compound Components, Render Props, dan Custom Hooks.",
-      image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=500&fit=crop"
+      title: "One on One Mentoring: Project Manager Career Path",
+      date: "27 Januari 2026",
+      location: "Online",
+      participants: "3 Peserta",
+      description: "Sesi mentoring private yang membahas tentang karir seorang Project Manager, mulai skill yang dibutuhkan hingga apa saja yang perlu dipersiapkan untuk apply sebagai PM",
+      image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&h=500&fit=crop"
     },
     {
-      title: "Tech Talk: Microservices Architecture",
-      date: "18 Maret 2024",
-      time: "19:00 - 21:00 WIB",
-      location: "Hybrid (Online & Offline)",
-      participants: "80+ peserta",
-      description: "Diskusi mendalam tentang implementasi microservices architecture di production environment.",
-      image: "https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=800&h=500&fit=crop"
-    },
-    {
-      title: "Meetup: Mobile Development Trends 2024",
-      date: "10 Maret 2024",
-      time: "15:00 - 18:00 WIB",
-      location: "Jakarta Selatan",
-      participants: "60+ peserta",
-      description: "Networking dan sharing session tentang tren mobile development terbaru di tahun 2024.",
+      title: "Sharing Session #2: Startup Journey",
+      date: "16 November 2025",
+      location: "Online",
+      participants: "21 Peserta",
+      description: "Sharing Session yang diisi oleh Co-Founder Teamly, berbagi pengalaman tentang bagaiaman mendirikan startup dari tahap ide hingga pengembangan produk.",
       image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&h=500&fit=crop"
     },
     {
-      title: "Coding Bootcamp: Full Stack Web Dev",
-      date: "1-3 Maret 2024",
-      time: "09:00 - 17:00 WIB",
-      location: "Bandung",
-      participants: "30+ peserta",
-      description: "Bootcamp 3 hari intensif untuk belajar full stack web development dari nol hingga deploy.",
-      image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=500&fit=crop"
+      title: "Sharing Session #1: Vibe Coding",
+      date: "25 Oktober 2025",
+      location: "Online",
+      participants: "15 Peserta",
+      description: "Sharing Session yang diisi oleh praktisi Fullstack Developer, berbagi pengalaman tentang bagaimana penggunaan Vibe Coding dan trend kedepannya.",
+      image: "https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=800&h=500&fit=crop"
     },
     {
-      title: "Webinar: AI Integration in Web Apps",
-      date: "25 Februari 2024",
-      time: "13:00 - 15:00 WIB",
-      location: "Online via Google Meet",
-      participants: "100+ peserta",
-      description: "Cara mengintegrasikan AI dan machine learning ke dalam aplikasi web modern.",
-      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=500&fit=crop"
+      title: "FE Talks: State Management",
+      date: "10 Januari 2025",
+      location: "Offline",
+      participants: "10 Peserta",
+      description: "Workshop yang membahasa tentang bagaimana menerapkan State Management yang efektif di level frontend",
+      image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=500&fit=crop"
     },
     {
-      title: "Hackathon: Build for Impact",
-      date: "10-11 Februari 2024",
-      time: "Full Day",
-      location: "Surabaya",
-      participants: "120+ peserta",
-      description: "Hackathon 24 jam untuk membuat solusi digital yang memberikan dampak positif untuk masyarakat.",
-      image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&h=500&fit=crop"
+      title: "Mini Course: UI/UX For Beginner",
+      date: "24 & 25 Mei 2024",
+      location: "Offline",
+      participants: "5 Peserta",
+      description: "Mini Course yang membahas tentang konsep & praktik, dasar UI/UX mulai dari UX Law hingga implementasi User Flow, Design System, Wireframing dan Prototyping.",
+      image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=500&fit=crop"
     }
   ];
 
@@ -129,7 +115,7 @@ const Komunitas = () => {
                   <CardDescription className="space-y-2">
                     <div className="flex items-center gap-2">
                       <Calendar className="w-4 h-4 text-primary" />
-                      <span>{event.date} • {event.time}</span>
+                      <span>{event.date}{(event as any).time ? ` • ${(event as any).time}` : ''}</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <MapPin className="w-4 h-4 text-primary" />
