@@ -44,7 +44,7 @@ const Tentang = () => {
     },
     {
       name: "Hadi Hasan Lubis",
-      role: "UI/UX Designer"
+      role: "Cyber Security"
     },
     {
       name: "Muh Aditya Dwijaya",
