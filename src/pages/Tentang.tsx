@@ -28,31 +28,38 @@ const Tentang = () => {
   const team = [
     {
       name: "Al Ikhsan AF",
-      role: "Founder & Team Lead"
+      role: "Founder & Team Lead",
+      photo: "/team_photo/ikhsan.webp"
     },
     {
       name: "Muh. Abdanul Ikhlas",
-      role: "Co-Founder & Frontend Developer"
+      role: "Co-Founder & Frontend Developer",
+      photo: "/team_photo/klaz.webp"
     },
     {
       name: "Muh. Riyadhi",
-      role: "Backend Developer"
+      role: "Backend Developer",
+      photo: "/team_photo/riyadhi.webp"
     },
     {
       name: "Yoga Agatha Pasaribu",
-      role: "Fullstack Developer"
+      role: "Fullstack Developer",
+      photo: "/team_photo/yoga.webp"
     },
     {
       name: "Hadi Hasan Lubis",
-      role: "Cyber Security"
+      role: "Cyber Security",
+      photo: "/team_photo/hadi.webp"
     },
     {
       name: "Muh Aditya Dwijaya",
-      role: "Media Sosial & Creative"
+      role: "Media Sosial & Creative",
+      photo: "/team_photo/adit.webp"
     },
     {
       name: "Raziet Muaqil",
-      role: "Media Sosial & Creative"
+      role: "Media Sosial & Creative",
+      photo: "/team_photo/agil.webp"
     }
   ];
 
@@ -126,7 +133,15 @@ const Tentang = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="relative mb-4 overflow-hidden rounded-lg aspect-square flex items-center justify-center bg-secondary group-hover:bg-secondary/80 transition-all duration-300">
-                  <User className="w-20 h-20 text-primary group-hover:scale-110 transition-transform duration-300" />
+                  {member.photo ? (
+                    <img
+                      src={member.photo}
+                      alt={member.name}
+                      className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-300"
+                    />
+                  ) : (
+                    <User className="w-20 h-20 text-primary group-hover:scale-110 transition-transform duration-300" />
+                  )}
                   <div className="absolute inset-0 bg-gradient-hero opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
                 </div>
                 <h3 className="text-xl font-semibold text-foreground mb-1">
