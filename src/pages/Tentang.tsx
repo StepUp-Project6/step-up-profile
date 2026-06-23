@@ -29,38 +29,38 @@ const Tentang = () => {
     {
       name: "Al Ikhsan AF",
       role: "Founder & Team Lead",
-      photo: "/team_photo/ikhsan.webp"
+      photo: "/team_photo/ikhsan.webp",
     },
     {
       name: "Muh. Abdanul Ikhlas",
       role: "Co-Founder & Frontend Developer",
-      photo: "/team_photo/klaz.webp"
+      photo: "/team_photo/klaz.webp",
     },
     {
       name: "Muh. Riyadhi",
-      role: "Backend Developer",
-      photo: "/team_photo/riyadhi.webp"
+      role: "Fullstack Developer",
+      photo: "/team_photo/riyadhi.webp",
     },
     {
       name: "Yoga Agatha Pasaribu",
       role: "Fullstack Developer",
-      photo: "/team_photo/yoga.webp"
+      photo: "/team_photo/yoga.webp",
     },
     {
       name: "Hadi Hasan Lubis",
       role: "Cyber Security",
-      photo: "/team_photo/hadi.webp"
+      photo: "/team_photo/hadi.webp",
     },
     {
       name: "Muh Aditya Dwijaya",
       role: "Media Sosial & Creative",
-      photo: "/team_photo/adit.webp"
+      photo: "/team_photo/adit.webp",
     },
     {
       name: "Raziet Muaqil",
       role: "Media Sosial & Creative",
-      photo: "/team_photo/agil.webp"
-    }
+      photo: "/team_photo/agil.webp",
+    },
   ];
 
   return (
