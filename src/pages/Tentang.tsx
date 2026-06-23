@@ -40,6 +40,7 @@ const Tentang = () => {
       name: "Muh. Riyadhi",
       role: "Fullstack Developer",
       photo: "/team_photo/riyadhi.webp",
+      objectPosition: "object-[center_20%]",
     },
     {
       name: "Yoga Agatha Pasaribu",
@@ -55,6 +56,7 @@ const Tentang = () => {
       name: "Muh Aditya Dwijaya",
       role: "Media Sosial & Creative",
       photo: "/team_photo/adit.webp",
+      objectPosition: "object-[center_20%]",
     },
     {
       name: "Raziet Muaqil",
@@ -137,7 +139,9 @@ const Tentang = () => {
                     <img
                       src={member.photo}
                       alt={member.name}
-                      className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-300"
+                      className={`w-full h-full object-cover group-hover:scale-110 transition-transform duration-300 ${
+                        member.objectPosition || "object-top"
+                      }`}
                     />
                   ) : (
                     <User className="w-20 h-20 text-primary group-hover:scale-110 transition-transform duration-300" />
