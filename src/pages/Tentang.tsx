@@ -38,7 +38,7 @@ const Tentang = () => {
     },
     {
       name: "Muh. Riyadhi",
-      role: "Fullstack Developer",
+      role: "Co-Founder & Data Analyst",
       photo: "/team_photo/riyadhi.webp",
       objectPosition: "object-[center_20%]",
     },
