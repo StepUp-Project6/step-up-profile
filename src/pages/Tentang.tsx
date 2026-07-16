@@ -43,14 +43,14 @@ const Tentang = () => {
       objectPosition: "object-[center_20%]",
     },
     {
-      name: "Yoga Agatha Pasaribu",
-      role: "Fullstack Developer",
-      photo: "/team_photo/yoga.webp",
-    },
-    {
       name: "Hadi Hasan Lubis",
       role: "Cyber Security",
       photo: "/team_photo/hadi.webp",
+    },
+    {
+      name: "Yoga Agatha Pasaribu",
+      role: "Fullstack Developer",
+      photo: "/team_photo/yoga.webp",
     },
     {
       name: "Muh Aditya Dwijaya",
