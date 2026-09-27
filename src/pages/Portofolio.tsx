@@ -3,6 +3,17 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+import oneHomeImage from "@/assets/porto/one-home.png";
+import presensikuImage from "@/assets/porto/presensiku.png";
+import edutanimasImage from "@/assets/porto/edutanimas.png";
+import swanbagImage from "@/assets/porto/swanbag.png";
+import buketImage from "@/assets/porto/buket.png";
+import momsieeImage from "@/assets/porto/momsiee.png";
+import libtourImage from "@/assets/porto/libtour.png";
+import myumkmImage from "@/assets/porto/myumkm.png";
+import lindsocietyImage from "@/assets/porto/lindsociety.png";
+import himalayaImage from "@/assets/porto/himalaya.png";
+
 const projects = [
   {
     title: "One Home",
@@ -14,7 +25,7 @@ const projects = [
       { name: "Tailwind", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" }
     ],
     categories: ["Website", "E-learning"],
-    image: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=800&h=500&fit=crop"
+    image: oneHomeImage
   },
   {
     title: "PresensiKU",
@@ -26,7 +37,64 @@ const projects = [
       { name: "Tailwind", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" }
     ],
     categories: ["Website", "SaaS"],
-    image: "https://images.unsplash.com/photo-1555421689-491a97ff2040?w=800&h=500&fit=crop"
+    image: presensikuImage
+  },
+  {
+    title: "Buket Byatiq",
+    description: "Profile UMKM buket bunga & cendera mata",
+    tech: [
+      { name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+      { name: "Tailwind", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" }
+    ],
+    categories: ["Website"],
+    image: buketImage
+  },
+  {
+    title: "Momsie",
+    description: "Platform sharing & konsultasi kehamilan antar tenaga medis & ibu hamil",
+    tech: [
+      { name: "Figma", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" }
+    ],
+    categories: ["UI/UX Design"],
+    image: momsieeImage
+  },
+  {
+    title: "Swanbag",
+    description: "Profile UMKM tas ramah lingkungan",
+    tech: [
+      { name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+      { name: "Tailwind", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" }
+    ],
+    categories: ["Website"],
+    image: swanbagImage
+  },
+  {
+    title: "EduTaniMas",
+    description: "Profile edukasi pertanian berkelanjutan untuk sekolah",
+    tech: [
+      { name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+      { name: "Tailwind", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" }
+    ],
+    categories: ["Website"],
+    image: edutanimasImage
+  },
+  {
+    title: "LIND Society",
+    description: "Sistem pengelolaan & penyewaan properti & wisate di Bali",
+    tech: [
+      { name: "Figma", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" }
+    ],
+    categories: ["Wireframe", "UX Research"],
+    image: lindsocietyImage
+  },
+  {
+    title: "My UMKM",
+    description: "Dashboard analitik UMKM naungan Indomaret",
+    tech: [
+      { name: "Figma", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" }
+    ],
+    categories: ["UI/UX Design"],
+    image: myumkmImage
   },
   {
     title: "LIBTour",
@@ -38,17 +106,7 @@ const projects = [
       { name: "Tailwind", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" }
     ],
     categories: ["Website"],
-    image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&h=500&fit=crop"
-  },
-  {
-    title: "EduTaniMas",
-    description: "Profile edukasi pertanian berkelanjutan untuk sekolah",
-    tech: [
-      { name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-      { name: "Tailwind", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" }
-    ],
-    categories: ["Website"],
-    image: "https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=800&h=500&fit=crop"
+    image: libtourImage
   },
   {
     title: "Bimbel Himalaya",
@@ -58,54 +116,7 @@ const projects = [
       { name: "compas.co.id", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/chrome/chrome-original.svg" }
     ],
     categories: ["Product Research"],
-    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&h=500&fit=crop"
-  },
-  {
-    title: "My UMKM",
-    description: "Dashboard analitik UMKM naungan Indomaret",
-    tech: [
-      { name: "Figma", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" }
-    ],
-    categories: ["UI/UX Design"],
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop"
-  },
-  {
-    title: "Swanbag",
-    description: "Profile UMKM tas ramah lingkungan",
-    tech: [
-      { name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-      { name: "Tailwind", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" }
-    ],
-    categories: ["Website"],
-    image: "https://images.unsplash.com/photo-1544816155-12df9643f363?w=800&h=500&fit=crop"
-  },
-  {
-    title: "Buket Byatiq",
-    description: "Profile UMKM buket bunga & cendera mata",
-    tech: [
-      { name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-      { name: "Tailwind", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" }
-    ],
-    categories: ["Website"],
-    image: "https://images.unsplash.com/photo-1526047932273-341f2a7631f9?w=800&h=500&fit=crop"
-  },
-  {
-    title: "LIND Society",
-    description: "Sistem pengelolaan & penyewaan properti & wisate di Bali",
-    tech: [
-      { name: "Figma", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" }
-    ],
-    categories: ["Wireframe", "UX Research"],
-    image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=500&fit=crop"
-  },
-  {
-    title: "Momsie",
-    description: "Platform sharing & konsultasi kehamilan antar tenaga medis & ibu hamil",
-    tech: [
-      { name: "Figma", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" }
-    ],
-    categories: ["UI/UX Design"],
-    image: "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=800&h=500&fit=crop"
+    image: himalayaImage
   }
 ];
 
@@ -132,7 +143,7 @@ const Portofolio = () => {
             Portofolio Kami
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Karya-karya terbaik kami yang telah membantu klien mencapai tujuan bisnis mereka
+            Project terbaik kami yang telah membantu klien mencapai tujuan bisnis mereka
           </p>
         </div>
 
@@ -186,6 +197,13 @@ const Portofolio = () => {
               </CardContent>
             </Card>
           ))}
+
+          {currentPage === totalPages && (
+            <Card className="border-border border-dashed bg-secondary/20 flex flex-col items-center justify-center text-center px-6 py-12 animate-fade-in">
+              <span className="text-5xl font-bold text-primary mb-2">10+</span>
+              <span className="text-sm text-muted-foreground">Project Lainnya</span>
+            </Card>
+          )}
         </div>
 
         {/* Pagination */}

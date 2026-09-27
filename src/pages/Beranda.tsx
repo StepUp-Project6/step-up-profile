@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowRight, Palette, Globe, MessageSquare, Users, Shield, CheckCircle, Search, UserCheck } from "lucide-react";
+import { ArrowRight, Palette, Globe, MessageSquare, Users, Shield, CheckCircle, Headphones } from "lucide-react";
 import { Link } from "react-router-dom";
 
 // Client logos
@@ -12,6 +12,12 @@ import daunLogo from "@/assets/clients/daun-logo.png";
 import himatifLogo from "@/assets/clients/himatif.png";
 import libtourLogo from "@/assets/clients/libtour.png";
 import tehIdamanLogo from "@/assets/clients/teh-idaman.png";
+import himalayaLogo from "@/assets/clients/logo-himalaya.png";
+import momsieLogo from "@/assets/clients/logo-momsie.png";
+
+// Portofolio images
+import oneHomeImage from "@/assets/porto/one-home.png";
+import presensikuImage from "@/assets/porto/presensiku.png";
 
 const clientLogos = [
   { src: swanbagLogo, alt: "SwanBag" },
@@ -22,6 +28,8 @@ const clientLogos = [
   { src: himatifLogo, alt: "HIMATIF" },
   { src: libtourLogo, alt: "LIBTour" },
   { src: tehIdamanLogo, alt: "Teh Idaman" },
+  { src: himalayaLogo, alt: "Bimbel Himalaya" },
+  { src: momsieLogo, alt: "Momsie" },
 ];
 
 const Beranda = () => {
@@ -76,12 +84,11 @@ const Beranda = () => {
               Kami hadir sebagai mitra teknologi yang terus bertumbuh melalui kolaborasi dengan berbagai klien
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-12">
             {[
+              { number: "98%", label: "Kepuasan Klien" },
               { number: "20+", label: "Project Selesai" },
-              { number: "10+", label: "Klien Puas" },
-              { number: "100%", label: "Kepuasan Klien" },
-              { number: "24/7", label: "Support" }
+              { number: "10+", label: "Klien Kami" }
             ].map((stat, index) => (
               <div key={index} className="text-center p-6 rounded-lg bg-background hover:bg-secondary/50 transition-all duration-300 border border-border">
                 <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
@@ -98,14 +105,14 @@ const Beranda = () => {
           <div className="text-center mb-6">
             <p className="text-sm text-muted-foreground mb-6">Dipercaya oleh berbagai klien</p>
             <div className="overflow-hidden relative">
-              <div className="flex animate-marquee">
+              <div className="flex w-max animate-marquee">
                 {/* Double the logos for seamless loop */}
                 {[...clientLogos, ...clientLogos].map((logo, index) => (
                   <div
                     key={index}
-                    className="flex-shrink-0 mx-6"
+                    className="flex-shrink-0 mx-3 sm:mx-6"
                   >
-                    <div className="w-20 h-20 rounded-full overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 border-2 border-border">
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 border-2 border-border">
                       <img
                         src={logo.src}
                         alt={logo.alt}
@@ -115,6 +122,28 @@ const Beranda = () => {
                   </div>
                 ))}
               </div>
+            </div>
+          </div>
+          <div className="flex flex-col items-center gap-2 mt-4">
+            <div className="flex flex-wrap justify-center gap-2">
+              {["UMKM", "Sekolah", "Personal", "Wirausaha"].map((tag) => (
+                <span
+                  key={tag}
+                  className="rounded-full border border-primary/30 bg-primary/5 px-3 py-1 text-xs font-medium text-foreground"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+            <div className="flex flex-wrap justify-center gap-2">
+              {["Company Profile", "E-Learning", "Absensi Digital", "Layanan Kesehatan", "Tour & Villa"].map((tag) => (
+                <span
+                  key={tag}
+                  className="rounded-full border border-primary/30 bg-primary/5 px-3 py-1 text-xs font-medium text-foreground"
+                >
+                  {tag}
+                </span>
+              ))}
             </div>
           </div>
         </div>
@@ -131,27 +160,22 @@ const Beranda = () => {
               Solusi digital untuk mengembangkan bisnis Anda
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             {[
               {
-                icon: Palette,
-                title: "UI/UX Design",
-                description: "Desain antarmuka yang menarik dan pengalaman pengguna yang optimal"
-              },
-              {
                 icon: Globe,
-                title: "Web Development",
-                description: "Website modern, cepat, dan SEO friendly dengan teknologi terkini"
+                title: "Website",
+                description: "Pembuatan website modern, cepat, dan teroptimasi SEO untuk tingkatkan pertumbuhan bisnis Anda."
               },
               {
-                icon: Search,
-                title: "Quality Assurance",
-                description: "Testing website untuk memastikan kualitas dan bebas bug"
+                icon: Palette,
+                title: "Desain",
+                description: "Desain UI/UX yang intuitif dan ramah pengguna untuk memberikan pengalaman digital terbaik di setiap platform."
               },
               {
-                icon: UserCheck,
-                title: "Talent Network",
-                description: "Membantu perusahaan mencari & menyaring talenta IT terbaik"
+                icon: Users,
+                title: "Tim",
+                description: "Solusi penyediaan talenta IT profesional yang siap langsung mendukung keberhasilan project Anda."
               }
             ].map((service, index) => (
               <Card
@@ -179,25 +203,30 @@ const Beranda = () => {
       {/* Mengapa Pilih Kami Section */}
       <section className="py-20 px-4 bg-secondary/30">
         <div className="container mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-foreground mb-12">
-            Mengapa Pilih Kami?
-          </h2>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Mengapa Pilih Kami?
+            </h2>
+            <p className="text-muted-foreground">
+              4 alasan bahwa kami vendor yang tepat
+            </p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
                 icon: MessageSquare,
                 title: "Free Konsultasi",
-                description: "Konsultasi gratis untuk membahas kebutuhan proyek Anda"
+                description: "Konsultasi gratis untuk membahas kebutuhan project Anda"
               },
               {
-                icon: Users,
-                title: "Tim Profesional",
-                description: "Tim berpengalaman yang siap membantu mewujudkan ide Anda"
+                icon: Headphones,
+                title: "Support 24/7",
+                description: "Tim siap membantu kapan pun Anda membutuhkan dukungan"
               },
               {
                 icon: CheckCircle,
                 title: "Hasil Berkualitas",
-                description: "Mengutamakan kualitas di setiap proyek yang dikerjakan"
+                description: "Mengutamakan kualitas di setiap project yang dikerjakan"
               },
               {
                 icon: Shield,
@@ -231,29 +260,27 @@ const Beranda = () => {
               Portofolio
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Beberapa proyek yang telah kami selesaikan untuk klien kami
+              Beberapa project yang telah kami selesaikan
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             {[
-              { title: "Company Profile", category: "Web Development", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop" },
-              { title: "Prototyping", category: "UI/UX Design", image: "https://images.unsplash.com/photo-1559028012-481c04fa702d?w=800&h=500&fit=crop" },
-              { title: "Product Development", category: "Research & Inovation", image: "https://images.unsplash.com/photo-1553413077-190dd305871c?w=800&h=500&fit=crop" }
+              { title: "One Home", image: oneHomeImage },
+              { title: "PresensiKU", image: presensikuImage }
             ].map((project, index) => (
               <Card
                 key={index}
                 className="border-border transition-all duration-300 group overflow-hidden"
               >
-                <div className="h-40 overflow-hidden">
+                <div className="h-64 overflow-hidden">
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-top"
                   />
                 </div>
                 <CardHeader>
                   <CardTitle className="text-lg">{project.title}</CardTitle>
-                  <CardDescription>{project.category}</CardDescription>
                 </CardHeader>
               </Card>
             ))}
@@ -275,7 +302,7 @@ const Beranda = () => {
             Hubungi Kami
           </h2>
           <p className="text-lg text-primary-foreground/90 mb-8">
-            Siap memulai proyek Anda? Konsultasikan kebutuhan bisnis Anda dengan tim kami secara gratis dan temukan solusi terbaik untuk mengembangkan bisnis digital Anda.
+            Siap memulai project Anda? Konsultasikan kebutuhan bisnis Anda dengan tim kami secara gratis dan temukan solusi terbaik untuk mengembangkan bisnis digital Anda.
           </p>
           <Button
             asChild

@@ -4,14 +4,14 @@ import { Target, Eye, Heart, Users, User } from "lucide-react";
 const Tentang = () => {
   const values = [
     {
-      icon: Target,
-      title: "Mission",
-      description: "Memberikan solusi digital terbaik yang membantu bisnis berkembang dan mencapai target mereka"
-    },
-    {
       icon: Eye,
       title: "Vision",
       description: "Menjadi software house terdepan yang dikenal dengan kualitas dan inovasi dalam setiap project"
+    },
+    {
+      icon: Target,
+      title: "Mission",
+      description: "Memberikan solusi digital terbaik yang membantu bisnis berkembang dan mencapai target mereka"
     },
     {
       icon: Heart,
@@ -81,7 +81,7 @@ const Tentang = () => {
         {/* Story Section */}
         <div className="mb-20 bg-secondary/50 rounded-lg p-8 md:p-12 animate-fade-in">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-            Our Story
+            Cerita
           </h2>
           <div className="space-y-4 text-muted-foreground text-lg">
             <p>
@@ -91,7 +91,7 @@ const Tentang = () => {
               Dengan tim yang berpengalaman dan passionate di bidang teknologi, kami telah membantu puluhan klien dari berbagai industri untuk mewujudkan ide mereka menjadi produk digital yang sukses.
             </p>
             <p>
-              Kami tidak hanya membuat kode, tetapi membangun solusi yang benar-benar memberikan nilai tambah untuk bisnis klien kami. Setiap project adalah kesempatan untuk menciptakan sesuatu yang meaningful dan impactful.
+              Kami tidak hanya membuat kode, tetapi membangun solusi yang benar-benar memberikan nilai tambah untuk bisnis klien kami. Setiap project adalah kesempatan untuk menciptakan sesuatu yang berarti dan berdampak.
             </p>
           </div>
         </div>
@@ -99,7 +99,7 @@ const Tentang = () => {
         {/* Values Grid */}
         <div className="mb-20">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-foreground mb-12">
-            Our Values
+            Nilai-Nilai
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
@@ -125,7 +125,7 @@ const Tentang = () => {
         {/* Team Section */}
         <div>
           <h2 className="text-3xl md:text-4xl font-bold text-center text-foreground mb-12">
-            Meet Our Team
+            Tim
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {team.map((member, index) => (
@@ -134,7 +134,7 @@ const Tentang = () => {
                 className="text-center group animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="relative mb-4 overflow-hidden rounded-lg aspect-square flex items-center justify-center bg-secondary group-hover:bg-secondary/80 transition-all duration-300">
+                <div className="relative mx-auto mb-4 w-32 h-32 sm:w-36 sm:h-36 overflow-hidden rounded-lg flex items-center justify-center bg-secondary group-hover:bg-secondary/80 transition-all duration-300">
                   {member.photo ? (
                     <img
                       src={member.photo}
@@ -144,7 +144,7 @@ const Tentang = () => {
                       }`}
                     />
                   ) : (
-                    <User className="w-20 h-20 text-primary group-hover:scale-110 transition-transform duration-300" />
+                    <User className="w-12 h-12 text-primary group-hover:scale-110 transition-transform duration-300" />
                   )}
                   <div className="absolute inset-0 bg-gradient-hero opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
                 </div>

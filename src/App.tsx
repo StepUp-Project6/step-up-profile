@@ -5,6 +5,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/organisms/Header";
 import Footer from "./components/organisms/Footer";
+import FloatingWhatsApp from "./components/organisms/FloatingWhatsApp";
+import ScrollToTop from "./components/ScrollToTop";
 import Beranda from "./pages/Beranda";
 import Layanan from "./pages/Layanan";
 import ProdukKami from "./pages/ProdukKami";
@@ -23,6 +25,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Header />
         <Routes>
           <Route path="/" element={<Beranda />} />
@@ -37,6 +40,7 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
+        <FloatingWhatsApp />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

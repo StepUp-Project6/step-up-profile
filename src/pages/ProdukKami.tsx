@@ -1,6 +1,9 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { MapPin, Clock, Users, BarChart3, CheckCircle, Home, Trophy, History, Search, Medal } from "lucide-react";
+import { MapPin, Clock, Users, BarChart3, CheckCircle, Bot, MessageSquare, Sparkles, Headphones } from "lucide-react";
+import tehIdamanLogo from "@/assets/clients/teh-idaman.png";
+import idamanImage from "@/assets/others/idaman.png";
+import aiCsImage from "@/assets/others/ai-cs.jpeg";
 
 const ProdukKami = () => {
   const products = [
@@ -9,29 +12,30 @@ const ProdukKami = () => {
       tagline: "Solusi Absensi Modern untuk UMKM",
       description: "Web app absensi yang dilengkapi dengan pelacakan lokasi GPS, foto selfie, dan laporan kehadiran realtime. Dirancang khusus untuk memudahkan manajemen kehadiran karyawan di UMKM.",
       features: [
-        { icon: MapPin, text: "GPS Location Tracking" },
-        { icon: Clock, text: "Clock In/Out Realtime" },
-        { icon: Users, text: "Employee Management" },
-        { icon: BarChart3, text: "Attendance Reports" },
-        { icon: CheckCircle, text: "Photo Verification" }
+        { icon: MapPin, text: "Pelacakan Lokasi GPS" },
+        { icon: Clock, text: "Absen Masuk/Keluar Realtime" },
+        { icon: Users, text: "Manajemen Karyawan" },
+        { icon: BarChart3, text: "Laporan Kehadiran" },
+        { icon: CheckCircle, text: "Verifikasi Foto" }
       ],
-      types: ["B2B", "SaaS"],
-      image: "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=800&h=500&fit=crop"
+      clients: [
+        { name: "Teh Idaman", logo: tehIdamanLogo }
+      ],
+      image: idamanImage
     },
     {
-      name: "Billiard Rank",
-      tagline: "Bermain Dengan Lebih Kompetitif",
-      description: "Web App untuk para pemain billiard agar lebih kompetitif, bukan hanya bermain semata. Hadir dengan fitur rank sebagai mvp, dilengkapi dengan fitur mencari lawan, create & join room, serta history match.",
+      name: "AI Customer Service",
+      tagline: "Layanan Pelanggan Otomatis 24/7",
+      description: "Layanan pelanggan berbasis AI yang menjawab pertanyaan pelanggan secara otomatis kapan saja. Terintegrasi dengan WhatsApp dan website, sehingga bisnis Anda tetap responsif tanpa menambah beban tim customer service.",
       features: [
-        { icon: Trophy, text: "Player Rank" },
-        { icon: Users, text: "Host & Join Room" },
-        { icon: History, text: "Match History" },
-        { icon: Search, text: "Search Player" },
-        { icon: Medal, text: "Badge & Achievement" }
+        { icon: Bot, text: "Balasan Otomatis 24/7" },
+        { icon: MessageSquare, text: "Integrasi WhatsApp & Website" },
+        { icon: Sparkles, text: "Bahasa Natural" },
+        { icon: Headphones, text: "Terhubung ke Admin" },
+        { icon: BarChart3, text: "Riwayat & Analitik Percakapan" }
       ],
-      types: ["B2C"],
-      status: "Coming Soon",
-      image: "https://images.unsplash.com/photo-1534423861386-85a16f5d13fd?w=800&h=500&fit=crop"
+      clients: [],
+      image: aiCsImage
     }
   ];
 
@@ -49,7 +53,7 @@ const ProdukKami = () => {
         </div>
 
         {/* Products Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 gap-8 max-w-2xl mx-auto">
           {products.map((product, index) => (
             <Card
               key={index}
@@ -58,23 +62,15 @@ const ProdukKami = () => {
             >
               {/* Product Image */}
               <div className="relative overflow-hidden h-48">
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute top-4 left-4 flex gap-2">
-                  {product.types.map((type, idx) => (
-                    <span key={idx} className="px-3 py-1 text-xs font-semibold rounded-full bg-primary text-primary-foreground">
-                      {type}
-                    </span>
-                  ))}
-                  {product.status === "Coming Soon" && (
-                    <span className="px-3 py-1 text-xs font-semibold rounded-full bg-amber-500 text-white">
-                      Coming Soon
-                    </span>
-                  )}
-                </div>
+                {product.image ? (
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className="w-full h-full bg-secondary/30" />
+                )}
               </div>
 
               <CardHeader className="pb-4">
@@ -102,17 +98,31 @@ const ProdukKami = () => {
                     ))}
                   </div>
                 </div>
+                {product.clients.length > 0 && (
+                  <div className="mb-6">
+                    <h3 className="text-sm font-semibold text-foreground mb-3">Digunakan Oleh</h3>
+                    <div className="flex flex-wrap gap-3">
+                      {product.clients.map((client) => (
+                        <div key={client.name} className="flex items-center gap-2">
+                          <img
+                            src={client.logo}
+                            alt={client.name}
+                            className="w-8 h-8 rounded-full object-cover ring-1 ring-border"
+                          />
+                          <span className="text-sm text-foreground">{client.name}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
                 <Button
-                  disabled={product.status === "Coming Soon"}
-                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground shadow-soft disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground shadow-soft"
                   onClick={() => {
-                    if (product.status !== "Coming Soon") {
-                      const message = `Halo Step Up Project, saya tertarik untuk request demo produk ${product.name}. Mohon informasinya lebih lanjut.`;
-                      window.open(`https://wa.me/6282262191159?text=${encodeURIComponent(message)}`, '_blank');
-                    }
+                    const message = `Halo Step Up Project, saya tertarik untuk request demo produk ${product.name}. Mohon informasinya lebih lanjut.`;
+                    window.open(`https://wa.me/6282262191159?text=${encodeURIComponent(message)}`, '_blank');
                   }}
                 >
-                  Request Demo
+                  Coba Sekarang
                 </Button>
               </CardContent>
             </Card>
@@ -136,7 +146,7 @@ const ProdukKami = () => {
               window.open(`https://wa.me/6282262191159?text=${encodeURIComponent(message)}`, '_blank');
             }}
           >
-            Hubungi Sales
+            Hubungi Kami
           </Button>
         </div>
       </div>

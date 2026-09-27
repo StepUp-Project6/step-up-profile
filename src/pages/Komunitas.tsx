@@ -138,7 +138,7 @@ const Komunitas = () => {
         </div>
 
         {/* Join Community & Social Media Section */}
-        <div className="bg-gradient-hero rounded-lg p-12 text-center">
+        <div className="bg-gradient-hero rounded-lg p-6 sm:p-8 md:p-12 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
             Join Komunitas Kami!
           </h2>

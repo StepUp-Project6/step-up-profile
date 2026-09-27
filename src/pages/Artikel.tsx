@@ -129,7 +129,7 @@ const Artikel = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="mt-20 text-center bg-gradient-hero rounded-lg p-12">
+        <div className="mt-20 text-center bg-gradient-hero rounded-lg p-6 sm:p-8 md:p-12">
           <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
             Ingin Belajar Lebih Banyak?
           </h2>

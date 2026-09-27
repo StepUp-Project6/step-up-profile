@@ -1,6 +1,15 @@
+import { Link } from "react-router-dom";
 import { Mail, MapPin, Phone } from "lucide-react";
 
 const Footer = () => {
+  const pageLinks = [
+    { to: "/", label: "Beranda" },
+    { to: "/layanan", label: "Layanan" },
+    { to: "/portofolio", label: "Portofolio" },
+    { to: "/produk", label: "Produk" },
+    { to: "/tentang", label: "Tentang Kami" },
+  ];
+
   return (
     <footer className="bg-secondary/50 border-t border-border mt-20">
       <div className="container mx-auto px-4 py-12">
@@ -16,30 +25,20 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Quick Links */}
+          {/* Halaman */}
           <div>
-            <h4 className="text-lg font-semibold text-foreground mb-4">Quick Links</h4>
+            <h4 className="text-lg font-semibold text-foreground mb-4">Halaman</h4>
             <ul className="space-y-2">
-              <li>
-                <a href="/" className="text-muted-foreground hover:text-primary transition-colors duration-300">
-                  Beranda
-                </a>
-              </li>
-              <li>
-                <a href="/layanan" className="text-muted-foreground hover:text-primary transition-colors duration-300">
-                  Layanan Kami
-                </a>
-              </li>
-              <li>
-                <a href="/portofolio" className="text-muted-foreground hover:text-primary transition-colors duration-300">
-                  Portofolio
-                </a>
-              </li>
-              <li>
-                <a href="/tentang" className="text-muted-foreground hover:text-primary transition-colors duration-300">
-                  Tentang Kami
-                </a>
-              </li>
+              {pageLinks.map((link) => (
+                <li key={link.to}>
+                  <Link
+                    to={link.to}
+                    className="text-muted-foreground hover:text-primary transition-colors duration-300"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 

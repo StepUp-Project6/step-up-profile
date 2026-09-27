@@ -71,7 +71,7 @@ const HubungiKami = () => {
             Hubungi Kami
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Konsultasi gratis untuk membahas proyek dan kebutuhan bisnis Anda
+            Konsultasi gratis untuk membahas project dan kebutuhan bisnis Anda
           </p>
         </div>
       </section>
@@ -120,7 +120,7 @@ const HubungiKami = () => {
                     />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="message">Ceritakan Proyek Anda</Label>
+                    <Label htmlFor="message">Ceritakan Project Anda</Label>
                     <Textarea
                       id="message"
                       placeholder="Saya ingin membuat website untuk..."
